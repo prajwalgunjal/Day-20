@@ -8,9 +8,12 @@ public class UserRegistrationProblem {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Fist name:- ");
         String name = sc.next();
+        System.out.print("Enter Last name:- ");
+        String lname = sc.next();
         Pattern pattern = Pattern.compile("^[A-Z]?[a-z]{3,}$");
         Matcher matcher = pattern.matcher(name);
-        if (matcher.matches())
+        Matcher matcher1 = pattern.matcher(lname);
+        if (matcher.matches()&& matcher1.matches())
             System.out.println("valid");
         else
             System.out.println("Invalid");
